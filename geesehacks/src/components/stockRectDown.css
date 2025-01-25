@@ -1,0 +1,24 @@
+.stock-rect-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, orange, pink);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.stock-rect-down h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.stock-rect-down p {
+  font-size: 20px;
+  color: red; /* Red text for price */
+  text-decoration: line-through;
+  margin: 0;
+}
