@@ -1,6 +1,6 @@
 import React from 'react';
-import './stockRectDown.css';
-import './stockRectUp.css';
+import './homeStockRectDown.css';
+import './homeStockRectUp.css';
 
 interface StockRectProps {
   ticker: string;
@@ -8,7 +8,7 @@ interface StockRectProps {
   isStockUp: boolean; // Boolean to determine stock movement
 }
 
-const StockRect: React.FC<StockRectProps> = ({ ticker, price, isStockUp }) => {
+const HomeStockRect: React.FC<StockRectProps> = ({ ticker, price, isStockUp }) => {
   return (
     <div className={isStockUp ? 'stock-rect-up' : 'stock-rect-down'}>
       <h1>{ticker}</h1>
@@ -17,4 +17,4 @@ const StockRect: React.FC<StockRectProps> = ({ ticker, price, isStockUp }) => {
   );
 };
 
-export default StockRect;
+export default HomeStockRect;
