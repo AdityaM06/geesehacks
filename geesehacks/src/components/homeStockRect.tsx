@@ -5,7 +5,7 @@ import './homeStockRect.css';
 interface StockRectProps {
   ticker: string;
   price: number;
-  isStockUp: boolean; // Boolean to determine stock movement
+  isStockUp: boolean; 
 }
 
 const HomeStockRect: React.FC<StockRectProps> = ({ ticker, price, isStockUp }) => {
