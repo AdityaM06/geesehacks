@@ -18,29 +18,18 @@ const SearchBar: React.FC = () => {
     }
   };
 
-  // Handle search button click event
-  const handleSearchClick = () => {
-    // Execute command when search button is clicked
-    // Placeholder for the command
-    console.log('Executing search for:', query);
-  };
 
   return (
     <div className="search-bar-container">
-      {/* Search bar with input and magnifying glass icon */}
       <div className="search-input-container">
         <input
           type="text"
           value={query}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          placeholder="Search..."
+          placeholder="Input a stock ticker..."
           className="search-input"
         />
-        {/* Search button with Bootstrap magnifying glass icon inside the input field */}
-        <button className="search-button" onClick={handleSearchClick}>
-          <i className="bi bi-search search-icon"></i> {/* Bootstrap magnifying glass icon */}
-        </button>
       </div>
     </div>
   );

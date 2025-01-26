@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     margin: 20px auto; /* Center the search bar */
+    width: 100%;
   }
   
   /* Container for input and magnifying glass button */

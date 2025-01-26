@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 import PortfolioPieChart from '../components/PortfolioPieChart.tsx';
 import HomeStockRect from '../components/homeStockRect.tsx';
+import SearchBar from '../components/SearchBar.tsx';
 
 export default function Home() {
   // Get the current date and format it as Month Day (e.g., "January 25")
@@ -35,6 +36,8 @@ export default function Home() {
 
       {/* Date */}
       <p className="date">{formattedDate}</p>
+
+      <SearchBar />
 
       <PortfolioPieChart data={sampleData}/>
 
