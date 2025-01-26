@@ -6,7 +6,7 @@ html{
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: black;
+  background-color: #22133d;
 }
 
 .app_top > h1 { 
