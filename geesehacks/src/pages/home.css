@@ -1,6 +1,6 @@
 /* Parent container for the entire Home page */
 .home-container {
-    background-color: transparent; /* Black background for the page */
+    background-color: #22133d; /* Black background for the page */
     color: white; /* White text color for all text */
     display: flex;
     flex-direction: column; /* Stack content vertically */
@@ -9,6 +9,8 @@
     max-width: 402px; /* Set max width for the container */
     margin: 0 auto; /* Center the container horizontally */
     justify-content: flex-start; /* Align items at the top */
+    padding-top: 350px;
+    padding-bottom: 100px;
   }
   
   /* Title styling */

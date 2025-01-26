@@ -5,7 +5,7 @@ import VideoCard2 from './VideoCard2.js';
 
 const Videos: React.FC = () => {
   return (
-    <div>
+    <div className='app_video'>
       <VideoCard />
       <VideoCard2 />
     </div>

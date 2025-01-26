@@ -31,7 +31,7 @@ function VideoCard1() {
                 alt="Reel video"
                 loop
                 autoPlay
-                controls
+                
                 muted
             />
         </div>
