@@ -1,0 +1,35 @@
+/* Base styling for the stock input card */
+.stock-input-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: left;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the shares input and label */
+  .shares-container {
+    margin-bottom: 16px;
+  }
+  
+  .shares-container label {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  .shares-container input {
+    width: 80px; /* Adjust width as necessary */
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for the stock price */
+  .price-container p {
+    font-size: 16px;
+    font-weight: bold;
+  }
