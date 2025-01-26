@@ -1,0 +1,37 @@
+.footer {
+    position: fixed;  
+    bottom: 18px;
+    left: 50%;  
+    transform: translateX(-50%);  
+    width: 350px;
+    background-color: #433F59; 
+    text-align: center; 
+    padding: 20px 0;           
+    border-radius: 0 0 20px 20px;  
+    z-index: 1000;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.footer-symbol {
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;  
+    gap: 40px;  /* Space between symbols */
+}
+
+/* Increase the size of the symbols */
+.footer-symbol img {
+    width: 50px;  
+    height: 50px;  
+    transition: all 0.1s ease-in-out;
+    filter: grayscale(100%);  /* Initially black & white */
+}
+
+/* Custom color on hover */
+.footer-symbol img:hover {
+    filter: grayscale(0%) sepia(100%) hue-rotate(200deg) saturate(200%) brightness(1.2);
+    opacity: 1;  /* Full opacity */
+    transform: scale(1.1);  /* Slight zoom on hover */
+}
