@@ -12,7 +12,7 @@ const HomeStockRect: React.FC<StockRectProps> = ({ ticker, price, isStockUp }) =
   return (
     <div className={isStockUp ? 'stock-rect-up' : 'stock-rect-down'}>
       <h1>{ticker}</h1>
-      <p >${price}</p>
+      <p >${price.toFixed(2)}</p>
     </div>
   );
 };

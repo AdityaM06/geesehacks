@@ -19,30 +19,6 @@ const PortfolioPieChart: React.FC<DonutChartProps> = ({ data }) => {
   const othersValue = topData.slice(3).reduce((sum, item) => sum + item.value, 0);
   const displayData = othersValue > 0 ? [...top3, { name: 'Others', value: othersValue }] : top3;
 
-  // Custom legend renderer
-  const renderLegend = (props: any) => {
-    const { payload } = props;
-    return (
-      <ul style={{ listStyleType: 'none', padding: 0, margin: 0, fontSize: '12px', lineHeight: '1.4' }}>
-        {payload.map((entry: any, index: number) => (
-          <li key={`item-${index}`} style={{ display: 'flex', alignItems: 'center', marginBottom: '4px' }}>
-            <span
-              style={{
-                display: 'inline-block',
-                width: '12px',  // Circle size
-                height: '12px',
-                backgroundColor: COLORS[index % COLORS.length], // Access the correct color using the index
-                marginRight: '8px',
-                borderRadius: '50%',
-              }}
-            ></span>
-            {entry.payload.name} {/* Use `entry.payload.name` for the label */}
-          </li>
-        ))}
-      </ul>
-    );
-  };
-
   return (
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
@@ -53,7 +29,6 @@ const PortfolioPieChart: React.FC<DonutChartProps> = ({ data }) => {
           outerRadius="80%"
           innerRadius="50%"
           labelLine={false}
-          paddingAngle={0}
           isAnimationActive={true}
           stroke="none"
         >
@@ -61,7 +36,7 @@ const PortfolioPieChart: React.FC<DonutChartProps> = ({ data }) => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Legend content={renderLegend} layout="vertical" align="right" verticalAlign="middle" />
+        <Legend verticalAlign="bottom" height={36} />
         <Tooltip />
       </PieChart>
     </ResponsiveContainer>

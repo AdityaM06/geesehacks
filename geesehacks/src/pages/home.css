@@ -1,34 +1,45 @@
+/* Parent container for the entire Home page */
 .home-container {
+    background-color: transparent; /* Black background for the page */
+    color: white; /* White text color for all text */
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
+    flex-direction: column; /* Stack content vertically */
     padding: 20px;
-    background-color: transparent; 
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure the content takes at least the full height of the viewport */
+    max-width: 402px; /* Set max width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    justify-content: flex-start; /* Align items at the top */
   }
   
+  /* Title styling */
   .title {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+    margin: 0;
   }
   
+  /* Date styling */
   .date {
     font-size: 24px;
-    color: #757575;
-    margin-bottom: 20px;
+    margin: 5px 0; /* Small margin between the title and the date */
+    color: #ccc; /* Lighter color for the date */
   }
   
-  .other-components {
-    width: 100%;
-    max-width: 900px;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  /* Center the pie chart horizontally */
+  .pie-chart-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Make sure it takes up full width */
+    margin-top: 20px; /* Space above the chart */
+  }
+  
+  /* Styling for the stock rects container */
+  .stock-rects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the stock rects horizontally */
+    margin-top: 30px;
+    gap: 10px;
+    width: 100%; /* Make sure it takes up full width */
   }
   
