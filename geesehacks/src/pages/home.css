@@ -6,11 +6,12 @@
     flex-direction: column; /* Stack content vertically */
     padding: 20px;
     min-height: 100vh; /* Ensure the content takes at least the full height of the viewport */
-    max-width: 402px; /* Set max width for the container */
+    max-width: 1000px; /* Set max width for the container */
     margin: 0 auto; /* Center the container horizontally */
     justify-content: flex-start; /* Align items at the top */
     padding-top: 350px;
     padding-bottom: 100px;
+    
   }
   
   /* Title styling */
