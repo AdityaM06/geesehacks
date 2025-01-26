@@ -8,7 +8,7 @@ interface BalanceDisplayProps {
 const BalanceDisplay: React.FC<BalanceDisplayProps> = ({ balance }) => {
   return (
     <div className="balance-card">
-      <p className="balance-text">Balance: ${balance.toFixed(2)} CAD</p>
+      <p className="balance-text">Balance: ${balance} CAD</p>
     </div>
   );
 };

@@ -3,14 +3,17 @@ import './SearchBar.css'; // Custom styles for the search bar
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
 
+// Define the type for the ticker data
+interface TickerData {
+  company: string;
+  price: string;
+  percentChange: string;
+  isStockUp: boolean;
+}
+
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
-  const [tickerData, setTickerData] = useState<{
-    company: string;
-    price: string;
-    percentChange: string;
-    isStockUp: boolean;
-  } | null>(null);
+  const [tickerData, setTickerData] = useState<TickerData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate(); // Hook for navigation
 
@@ -40,25 +43,25 @@ const SearchBar: React.FC = () => {
         const data = response.data.body;
 
         // Extract relevant data from the response
-        const tickerData = {
+        const tickerData: TickerData = {
           company: data.companyName,
           price: data.primaryData.lastSalePrice,
           percentChange: data.primaryData.percentageChange,
           isStockUp: data.primaryData.deltaIndicator.toLowerCase() === 'up',
         };
-
+        
         setTickerData(tickerData);
 
+
         // After fetching the data, navigate to the TradePage with the stock data
-        navigate('/trade', {
-          state: {
-            ticker: query,
-            companyName: tickerData.company,
-            price: tickerData.price,
-            percentChange: tickerData.percentChange,
-            isStockUp: tickerData.isStockUp,
-            balance: 1000, // Hardcoded balance
-          },
+        navigate('/trade', { state: {
+          ticker: query,
+          companyName: tickerData.company,
+          price: tickerData.price,
+          percentChange: tickerData.percentChange,
+          isStockUp: tickerData.isStockUp,
+          balance: 1000, // Hardcoded balance
+         }
         });
       } catch (error: any) {
         console.error('Error fetching data:', error);

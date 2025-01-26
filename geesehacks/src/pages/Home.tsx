@@ -31,15 +31,12 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      {/* Title */}
       <h1 className="title">Stocks</h1>
-
-      {/* Date */}
       <p className="date">{formattedDate}</p>
 
       <SearchBar />
 
-      <PortfolioPieChart data={sampleData}/>
+      <PortfolioPieChart data={sampleData} />
 
       <div className="stock-rects-container">
         {stockData.map((stock, index) => (
@@ -51,7 +48,6 @@ export default function Home() {
           />
         ))}
       </div>
-      
     </div>
   );
 }

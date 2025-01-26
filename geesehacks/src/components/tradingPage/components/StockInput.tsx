@@ -2,7 +2,7 @@ import React from 'react';
 import './StockInput.css'; // Ensure the styles are applied
 
 interface StockInputProps {
-  stockPrice: number; // Stock price passed as a prop
+  stockPrice: string; // Stock price passed as a prop
   setShares: React.Dispatch<React.SetStateAction<string>>; // Function to update shares in parent component
 }
 
@@ -43,7 +43,7 @@ const StockInput: React.FC<StockInputProps> = ({ stockPrice, setShares }) => {
       {/* Stock Price Row */}
       <div className="price-container">
         <span>Stock Prices:</span>
-        <span>${stockPrice.toFixed(2)}</span>
+        <span>{stockPrice}</span>
       </div>
     </div>
   );

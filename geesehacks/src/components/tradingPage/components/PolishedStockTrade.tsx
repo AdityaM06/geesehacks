@@ -4,8 +4,8 @@ import './polishedStockTrade.css';
 interface PolishedStockTradeProps {
   ticker: string;
   companyName: string;
-  price: number;
-  percentChange: number; // The numerical value for percent change
+  price: string;
+  percentChange: string; // The numerical value for percent change
   isStockUp: boolean;    // Determines whether the percentage change is positive (green) or negative (red)
 }
 
@@ -28,10 +28,10 @@ const PolishedStockTrade: React.FC<PolishedStockTradeProps> = ({
       <div className='price'>
         <div className="price-content">
           {/* Stock Price */}
-          <p className="stock-price">${price.toFixed(2)}</p>
+          <p className="stock-price">{price}</p>
           {/* Percentage Change */}
           <p className={`percent-change ${isStockUp ? 'percent-up' : 'percent-down'}`}>
-            {isStockUp ? '+' : ''}{percentChange.toFixed(2)}%
+            {isStockUp ? '+' : ''}{percentChange}
           </p>
         </div>
       </div>

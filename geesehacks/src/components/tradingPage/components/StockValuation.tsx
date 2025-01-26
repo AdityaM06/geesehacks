@@ -3,12 +3,12 @@ import "./stockValuation.css";
 import BuySellButton from "./BuySellButton.tsx";
 
 interface StockValuationProps {
-  price: number; // Price of the stock
+  price: string; // Price of the stock
   shares: number; // Number of shares
 }
 
 const StockValuation: React.FC<StockValuationProps> = ({ price, shares }) => {
-  const total = (price * shares).toFixed(2); // Calculate total
+  const total = (parseInt(price.replace('$', '')) * shares).toFixed(2); // Calculate total
 
   return (
     <div className="valuation-container">
@@ -16,7 +16,7 @@ const StockValuation: React.FC<StockValuationProps> = ({ price, shares }) => {
         <div className="calculation-display">
           <div className="line-item">
             <span>Price:</span>
-            <span>${price.toFixed(2)}</span>
+            <span>{price}</span>
           </div>
           <div className="line-item">
             <span>x</span>
