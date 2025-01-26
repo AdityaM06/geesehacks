@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './polishedStockTrade.css';
 
 interface PolishedStockTradeProps {
@@ -16,8 +17,20 @@ const PolishedStockTrade: React.FC<PolishedStockTradeProps> = ({
   percentChange,
   isStockUp
 }) => {
+  const navigate = useNavigate();
+
+  // Function to handle the closing (routing to "/")
+  const handleClose = () => {
+    navigate('/');
+  };
+
   return (
     <div className={`stock-card ${isStockUp ? 'stock-card-up' : 'stock-card-down'}`}>
+      {/* Close Button */}
+      <button className="close-btn" onClick={handleClose}>
+        X
+      </button>
+
       {/* Stock Ticker and Company Name */}
       <div className='company-info'>
         <h2 className="stock-ticker">{ticker}</h2>
@@ -31,7 +44,7 @@ const PolishedStockTrade: React.FC<PolishedStockTradeProps> = ({
           <p className="stock-price">{price}</p>
           {/* Percentage Change */}
           <p className={`percent-change ${isStockUp ? 'percent-up' : 'percent-down'}`}>
-            {isStockUp ? '+' : ''}{percentChange}
+            {percentChange}
           </p>
         </div>
       </div>
