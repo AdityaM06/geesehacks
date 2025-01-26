@@ -11,6 +11,20 @@ interface DonutChartProps {
 const PortfolioPieChart: React.FC<DonutChartProps> = ({ data }) => {
   const COLORS = ['#9B59B6', '#48C3FC', '#00C49F', '#FFBB28', '#FF8042', '#F39C12', '#E74C3C'];
 
+  // Calculate total value of the dataset
+  const totalValue = data.reduce((sum, item) => sum + item.value, 0);
+
+  // Function to calculate percentage and display it in the legend
+  const legendFormatter = (value: string) => {
+    const item = data.find(d => d.name === value);
+    if (item) {
+      const percentage = ((item.value / totalValue) * 100).toFixed(2);
+      return `${value}: ${percentage}%`;
+    }
+    return value;
+  };
+
+  // Process data to show top 3 and group others
   const cashData = data.find(item => item.name === 'Cash');
   const filteredData = data.filter(item => item.name !== 'Cash');
   const sortedData = [...filteredData].sort((a, b) => b.value - a.value);
@@ -36,8 +50,8 @@ const PortfolioPieChart: React.FC<DonutChartProps> = ({ data }) => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Legend verticalAlign="bottom" height={36} />
-        <Tooltip />
+        <Legend verticalAlign="bottom" height={36} formatter={legendFormatter} />
+        <Tooltip formatter={(value: number) => `${((value / totalValue) * 100).toFixed(2)}%`} />
       </PieChart>
     </ResponsiveContainer>
   );

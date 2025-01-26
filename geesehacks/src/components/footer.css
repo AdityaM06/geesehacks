@@ -28,13 +28,11 @@
   .footer-link:hover .footer-icon {
     transform: scale(1.1); /* Slight zoom effect on hover */
   }
-
   .footer-icon {
-    font-size: 30px; /* Adjust size */
-    color: white; /* Adjust color */
+    font-size: 30px;
+    color: white;
   }
-  
+
   .footer-link {
-    margin: 0 20px; /* Adjust spacing between icons */
+    margin: 0 20px;
   }
-  
