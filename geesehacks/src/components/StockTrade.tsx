@@ -18,7 +18,7 @@ const StockTrade: React.FC<StockTradeProps> = ({ ticker, price, isStockUp }) => 
   return (
     <div className={`stock-card ${isStockUp ? 'stock-card-up' : 'stock-card-down'}`}>
       <h2 className="ticker">{ticker}</h2>
-      <p className="price">${price.toFixed(2)}</p>
+      <p className="price">${price}</p>
       <div className="quantity-controls">
         <button className="quantity-btn" onClick={decrement}>−</button>
         <span className="quantity">{quantity}</span>

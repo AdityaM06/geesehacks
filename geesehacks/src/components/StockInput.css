@@ -1,35 +1,52 @@
-/* Base styling for the stock input card */
 .stock-input-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    text-align: left;
-    width: 250px;
-    background-color: white;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Styling for the shares input and label */
-  .shares-container {
-    margin-bottom: 16px;
-  }
-  
-  .shares-container label {
-    font-size: 16px;
-    margin-right: 8px;
-  }
-  
-  .shares-container input {
-    width: 80px; /* Adjust width as necessary */
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Styling for the stock price */
-  .price-container p {
-    font-size: 16px;
-    font-weight: bold;
-  }
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  max-width: 402px; /* Limit the card's width */
+  box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+.shares-container,
+.price-container {
+  display: flex;
+  justify-content: flex-start; /* Align elements to the start */
+  align-items: center; /* Vertically align elements */
+  gap: 8px; /* Add a small gap between label and price */
+  margin-bottom: 12px; /* Space between rows */
+}
+
+.shares-container label,
+.price-container span {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold;
+  white-space: nowrap; /* Prevent wrapping */
+  color: white;
+}
+
+.shares-container input {
+  padding: 8px;
+  font-size: 16px;
+  width: 100px; /* Set a fixed width for input */
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  text-align: right; /* Align input text to the right */
+}
+
+.price-container span {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold;
+  overflow: hidden; /* Hide overflow in case of long text */
+  text-overflow: clip; /* Add ellipsis if text overflows */
+  color: white;
+}
+
+.price-container .price {
+  text-align: right; /* Align the price to the right */
+  min-width: 80px; /* Ensure price takes up some space */
+  color: white;
+}
+
+.price {
+  text-align: right; /* Align the price next to the label */
+  margin: 0;
+}

@@ -1,16 +1,7 @@
 /* Base styling for the stock card */
 .stock-card {
-    border: 1px solid #ccc;
-    border-top: none;  /* No border on top */
-    border-left: none; /* No border on the left */
-    border-right: none; /* No border on the right */
-    border-bottom: 2px solid #333; /* Add a thicker bottom border */
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
     text-align: center;
-    width: 250px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 402px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,28 +15,40 @@
 }
 
 .stock-ticker {
-    font-size: 20px; /* Smaller ticker */
+    font-size: 50px; /* Smaller ticker */
     font-weight: bold;
+    color: white;
 }
 
 .company-name {
-    font-size: 14px; /* Slightly smaller than ticker */
+    font-size: 25px; /* Slightly smaller than ticker */
     color: #757575;
 }
 
-/* Stock price styling (twice as large) */
+/* Center the .price div and align its content to the right */
 .price {
     margin-top: 8px;
+    width: 100%; /* Make the price div take up full width */
+    display: flex;
+    
+    justify-content: center; /* Center the price div horizontally */
+}
+
+.price-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    text-align: right; /* Ensures text is aligned to the right */
 }
 
 .stock-price {
     font-size: 40px; /* Larger price */
     font-weight: bold;
-    color: #333;
+    color: white;
     margin: 8px 0;
 }
 
-/* Percentage change styling (slightly smaller) */
+/* Percentage change styling */
 .percent-change {
     font-size: 16px; /* Slightly smaller percentage */
     margin: 8px 0;

@@ -26,11 +26,11 @@ const PolishedStockTrade: React.FC<PolishedStockTradeProps> = ({
       
       <div className='price'>
         {/* Stock Price */}
-        <p className="stock-price">${price.toFixed(2)}</p>
+        <p className="stock-price">${price}</p>
       
         {/* Percentage Change */}
         <p className={`percent-change ${isStockUp ? 'percent-up' : 'percent-down'}`}>
-          {isStockUp ? '+' : ''}{percentChange.toFixed(2)}%
+          {isStockUp ? '+' : ''}{percentChange}%
         </p>
       </div>
     </div>

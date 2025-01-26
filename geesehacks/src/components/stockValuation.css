@@ -1,0 +1,36 @@
+.valuation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 402px;
+    margin: 20px auto;
+    border-bottom: 1px solid #ccc; /* Optional, can be adjusted to white if needed */
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calculation-section {
+    text-align: right;
+  }
+  
+  .calculation-display {
+    font-size: 24px;
+    font-family: monospace;
+    color: white; /* Set the default text color to white */
+  }
+  
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: white; /* Ensure text inside each line-item is white */
+  }
+  
+  .divider {
+    border: none;
+    border-top: 2px solid white; /* Make the divider line white */
+    margin: 8px 0;
+    width: 100%;
+  }
+  
