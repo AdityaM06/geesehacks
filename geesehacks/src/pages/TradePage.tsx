@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PolishedStockTrade from './PolishedStockTrade.tsx';
-import BalanceDisplay from './Balance.tsx';
-import StockInput from './StockInput.tsx';
-import StockValuation from './StockValuation.tsx';
+import PolishedStockTrade from '../components/tradingPage/components/PolishedStockTrade.tsx';
+import BalanceDisplay from '../components/tradingPage/components/Balance.tsx';
+import StockInput from '../components/tradingPage/components/StockInput.tsx';
+import StockValuation from '../components/tradingPage/components/StockValuation.tsx';
 
 interface TradePageProps {
   ticker: string;

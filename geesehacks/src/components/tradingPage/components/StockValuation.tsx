@@ -1,5 +1,6 @@
 import React from "react";
 import "./stockValuation.css";
+import BuySellButton from "./BuySellButton.tsx";
 
 interface StockValuationProps {
   price: number; // Price of the stock
@@ -11,7 +12,6 @@ const StockValuation: React.FC<StockValuationProps> = ({ price, shares }) => {
 
   return (
     <div className="valuation-container">
-      {/* Calculation Section */}
       <div className="calculation-section">
         <div className="calculation-display">
           <div className="line-item">
@@ -28,6 +28,11 @@ const StockValuation: React.FC<StockValuationProps> = ({ price, shares }) => {
             <span>${total}</span>
           </div>
         </div>
+      </div>
+
+      {/* BuySellButton will now be stacked below the calculation section */}
+      <div className="button-container">
+        <BuySellButton />
       </div>
     </div>
   );
