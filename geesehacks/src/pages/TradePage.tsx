@@ -4,6 +4,8 @@ import BalanceDisplay from '../components/tradingPage/components/Balance.tsx';
 import StockInput from '../components/tradingPage/components/StockInput.tsx';
 import StockValuation from '../components/tradingPage/components/StockValuation.tsx';
 
+import './tradePage.css';
+
 interface TradePageProps {
   ticker: string;
   companyName: string;

@@ -3,8 +3,7 @@
   padding: 16px;
   border-bottom: 1px solid #ccc;
   background-color: transparent;
-  max-width: 402px; /* Limit the card's width */
-  width: 100%; /* Ensure it fills available space without exceeding max-width */
+  width: 100%;
 }
 
 /* Shares Input Row */
