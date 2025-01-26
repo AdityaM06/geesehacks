@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import video1 from "./video/VIdeo3.MOV";
+import video1 from "../video/Video4.mp4";
 import './VideoCard.css';
 
 function VideoCard1() {

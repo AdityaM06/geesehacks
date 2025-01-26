@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import video1 from "../video/Video4.mp4";
+import video1 from "../video/Video6.mp4";
 import './VideoCard.css';
 
 function VideoCard1() {
@@ -31,7 +31,7 @@ function VideoCard1() {
                 alt="Reel video"
                 loop
                 autoPlay
-                comtrols
+                controls
                 muted
             />
         </div>

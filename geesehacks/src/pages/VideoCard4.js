@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import video1 from "./video/Video2.mp4"; // Convert to .mp4 for compatibility
+import video1 from "../video/Video5.mp4";
 import './VideoCard.css';
 
-function VideoCard() {
+function VideoCard1() {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const videoRef = useRef(null);
 
@@ -22,7 +22,7 @@ function VideoCard() {
     };
 
     return (
-        <div className="videoCard">
+        <div className="videoCard1">
             <video
                 ref={videoRef}
                 onClick={onVideoPress}
@@ -38,4 +38,4 @@ function VideoCard() {
     );
 }
 
-export default VideoCard;
+export default VideoCard1;

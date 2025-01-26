@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import video1 from "../video/Video2.mp4"; // Convert to .mp4 for compatibility
+import video1 from "../video/Video1.mp4"; // Convert to .mp4 for compatibility
 import './VideoCard.css';
 
 function VideoCard() {
@@ -32,7 +32,7 @@ function VideoCard() {
                 loop
                 autoPlay
                 muted
-                
+                controls
             />
         </div>
     );
