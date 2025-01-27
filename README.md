@@ -19,6 +19,6 @@ React Native to set up a developer environment for our web app
 Vercel to easily and seamlessly host our app on the internet
 
 ## Dashboard
-<img width="396" alt="Screenshot 2025-01-26 at 6 29 01 AM" src="https://github.com/user-attachments/assets/5fec986c-54aa-4114-acad-40aa46b19861" />
+<img width="400" alt="Screenshot 2025-01-26 at 6 29 01 AM" src="https://github.com/user-attachments/assets/5fec986c-54aa-4114-acad-40aa46b19861" />
 <img width="400" alt="Screenshot 2025-01-26 at 6 31 18 AM" src="https://github.com/user-attachments/assets/889aa73b-e0af-4b3e-abb9-8fe67bbc5b92" />
 <img width="400" alt="Screenshot 2025-01-26 at 6 32 30 AM" src="https://github.com/user-attachments/assets/4f575fa1-5859-4cd4-8591-0fae97520b3d" />
